@@ -401,13 +401,16 @@ header {
 }
 .atividade-img-area {
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
 }
 .atividade-img-area img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+.atividade-img-area img[src*="meditacao"] {
+    /* width: 80%; */
 }
 .atividade-img-area img[src*="mulheres"] {
     width: 150%;
