@@ -3,19 +3,14 @@ document.body.onscroll = () => {
     let header = document.querySelector("header .header");
     let logoArea = document.querySelector('.header .logo-area');
     if (window.pageYOffset > 200) {
-        // header.style.backgroundImage = "url('./recursos/imagens/complementares/zdenek-machacek-D9gKmhEavyU-unsplash.jpg')";
-        // header.style.backgroundPosition = 'top';
-        // header.style.backgroundSize = 'cover';
-        // header.style.backgroundColor = '#DF8E95';
         header.style.backgroundColor = '#9E6583';
         logoArea.style.height = '90px';
+        logoArea.style.width = '140px';
         header.style.height = '100px';
     } else {
-        // header.style.backgroundImage = '';
-        // header.style.backgroundPosition = '';
-        // header.style.backgroundSize = '';
         header.style.backgroundColor = '';
         logoArea.style.height = '';
+        logoArea.style.width = '';
         header.style.height = '';
     }
 }
