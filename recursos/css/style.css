@@ -409,9 +409,6 @@ header {
     width: 100%;
     height: 100%;
 }
-.atividade-img-area img[src*="meditacao"] {
-    /* width: 80%; */
-}
 .atividade-img-area img[src*="mulheres"] {
     width: 150%;
     object-position: -60px;
@@ -552,8 +549,8 @@ header {
 
 /* contatos -------------------------------------------------------------------------------------------------- */
 .contatos-area {
-    background-color: #b1769588;
-    min-height: 300px;
+    /* background-color: #b1769588; */
+    min-height: 400px;
     height: 40vh;
 }
 .contatos{
@@ -561,19 +558,19 @@ header {
     flex: 1;
     min-height: 100px;
     justify-content: stretch;
-    padding: 2px;
 }
 .contatos-pessoa {
     background-color: #ffffff;
     max-width: 400px;
     flex: 1;
     padding: 20px 40px;
-    color: #9E6482;
+    border: 2px solid #b1769588;
     text-align: center;
+    /* color: #9E6482; */
     color: #888888;
 }
 .contatos-pessoa:first-child {
-    margin-bottom: 2px;
+    border-bottom: 0;
 }
 .contatos-pessoa h3 {
     /* margin-bottom: 15px; */
