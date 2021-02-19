@@ -291,18 +291,19 @@ header {
     height: 50vh;
 }
 .descricao-texto--container {
-    background-color: #fcf9fa;
+    /* background-color: #fcf9fa; */
     /* width: 50%; */
     flex: 1;
     padding: 50px 35px;
-    /* padding-right: 20px; */
     text-align: left;
+    display: flex;
+    justify-content: center;
 }
 .descricao-texto--area {
     /* width: 80%; */
-    color: #999999;
-    justify-content: space-between;
     /* height: 70%; */
+    justify-content: space-between;
+    color: #999999;
 }
 .descricao-texto--paragrafos {
     text-align: justify;
@@ -548,24 +549,65 @@ header {
 
 /* contatos -------------------------------------------------------------------------------------------------- */
 .contatos-area {
+    background-color: #b1769588;
+    min-height: 300px;
+    height: 40vh;
+}
+.contatos{
     /* background-color: #ffffff; */
-    /* width: 100%; */
+    flex: 1;
     min-height: 100px;
-    padding: 20px;
+    justify-content: stretch;
+    padding: 2px;
 }
 .contatos-pessoa {
     background-color: #ffffff;
-    margin: 0 30px;
+    max-width: 400px;
+    flex: 1;
     padding: 20px 40px;
     color: #9E6482;
+    text-align: center;
     color: #888888;
 }
+.contatos-pessoa:first-child {
+    margin-bottom: 2px;
+}
 .contatos-pessoa h3 {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 24px;
 }
-.contatos-pessoa a {
-    text-decoration: underline;
+.contatos-pessoa p {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contatos-pessoa p:nth-child(2) {
+    margin-bottom: 20px;
+}
+.contatos-pessoa p:nth-child(3) {
+    margin-bottom: 5px;
+}
+.contatos-pessoa i {
+    font-size: 21px;
+    margin-right: 15px;
+}
+.contatos-pessoa a:hover {
+    color: #9E6482;
+    font-weight: bold;
+}
+.mapa-area {
+    flex: 2;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: stretch;
+}
+iframe {
+    object-position: center;
+    object-fit: cover;
+    min-width: 101%;
 }
 
 /* footer ---------------------------------------------------------------------------------------------------- */
