@@ -691,11 +691,12 @@ footer p a:hover {
 
 /* quem somos ------------------------------------------------------------------------------------------------ */
 .page-quem-somos .pessoa {
-    display: flex;
-    justify-content: center;
+    background-color: #9E658388;
     width: 100%;
     height: 80vh;
-    background-color: #9E658388;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 .page-quem-somos .pessoa:first-child {
     margin-bottom: 50px;
@@ -705,6 +706,14 @@ footer p a:hover {
     width: 50%;
     height: 80vh;
     overflow: hidden;
+}
+.page-quem-somos .pessoa:first-child .pessoa-foto-area {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.page-quem-somos .pessoa:last-child .pessoa-foto-area {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .page-quem-somos .pessoa-foto-img {
     width: 100%;
@@ -748,4 +757,97 @@ footer p a:hover {
         width: 110%;
         background-position: -3vw -90vh;
     }
+}
+
+
+
+
+
+
+
+
+/* página atividades ------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------- */
+
+/* header ---------------------------------------------------------------------------------------------------- */
+.page-atividades .header-banner {
+    background-image: url('../imagens/complementares/jd-mason-xCPdjitY5sQ-unsplash.jpg');
+    background-color: #9E658388;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    justify-content: stretch;
+    align-items: stretch;
+    background-blend-mode: soft-light;
+}
+
+/* atividades ------------------------------------------------------------------------------------------------ */
+.page-atividades .atividades-area {
+    width: 100%;
+    display: flex;
+}
+.page-atividades .atividades-area .atividade {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 100px;
+}
+.page-atividades .atividades-area figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page-atividades .atividades-area .atividade-image-area {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+}
+.page-atividades .atividades-area .atividade-image-area img {
+    width: 100%;
+    height: 101%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+.page-atividades .atividades-area .atividade-image-area img[src*=danca] {
+    object-position: center -150px;
+}
+.page-atividades .atividades-area .atividade-image-area img[src*=meditacao] {
+    object-position: center -1080px;
+}
+.page-atividades .atividades-area figure .resumo {
+    width: 100%;
+    color: #aaaaaa;
+}
+.page-atividades .atividades-area .atividade-resumo--titulo {
+    margin: 0 auto;
+    padding: 20px 0 5px;
+    font-size: 24px;
+    border-bottom: 2px solid #dddddd;
+}
+.page-atividades .atividades-area .atividade-resumo--texto {
+    margin: auto;
+    padding: 30px 150px;
+
+}
+.page-atividades .atividades-area figure .resumo p {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 34px;
+}
+.page-atividades .atividades-area figure .resumo .atividade-resumo--citacao {
+    padding-left: 100px;
+    font-style: italic;
+}
+.page-atividades .atividades-area figure .resumo p:last-child {
+    margin-top: 30px;
+    text-align: right;
+    font-weight: bold;
+    color: #b494a4;
+}
+.page-atividades .atividades-area figure .resumo p:last-child:hover {
+    color: #b494a4aa;
 }
