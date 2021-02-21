@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 .flex {
     display: flex;
 }
@@ -634,10 +638,6 @@ footer p a:hover {
 }
 
 
-
-
-
-
 /* media queries --------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 1140px) {
     .nav li {
@@ -655,5 +655,97 @@ footer p a:hover {
     .foto-area {
         width: 230px;
         height: 230px;
+    }
+}
+
+
+
+
+
+/* página quem somos ------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------- */
+
+/* header ---------------------------------------------------------------------------------------------------- */
+.page-quem-somos .header-banner {
+    background-image: url('../imagens/complementares/complementares-yoga.jpg');
+    width: 105%;
+    background-position: -30px center;
+    align-items: flex-end;
+}
+.page-quem-somos .header-banner-area {
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 3vh;
+    width: 100%;
+}
+.page-quem-somos .header-banner--quote-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.page-quem-somos .header-banner--quote-text {
+    font-size: 40px;
+}
+
+
+/* main ------------------------------------------------------------------------------------------------------ */
+
+/* quem somos ------------------------------------------------------------------------------------------------ */
+.page-quem-somos .pessoa {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background-color: #9E658388;
+}
+.page-quem-somos .pessoa:first-child {
+    margin-bottom: 50px;
+}
+.page-quem-somos .pessoa-foto-area {
+    /* flex: 1; */
+    width: 50%;
+    height: 80vh;
+    overflow: hidden;
+}
+.page-quem-somos .pessoa-foto-img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page-quem-somos .pessoa:last-child .pessoa-foto-img {
+    object-position: center -4.5vh;
+}
+.page-quem-somos .pessoa-descricao--area {
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+.page-quem-somos .pessoa-descricao--nome {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.page-quem-somos .pessoa-descricao--texto {
+    width: 100%;
+    padding: 20px;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 18px;
+}
+.page-quem-somos .pessoa-descricao--texto p:first-child {
+    margin-bottom: 10px;
+}
+
+
+
+/* media queries --------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 1800px) {
+    .page-quem-somos .header-banner {
+        width: 110%;
+        background-position: -3vw -90vh;
     }
 }
