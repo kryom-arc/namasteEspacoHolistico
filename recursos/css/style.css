@@ -416,6 +416,10 @@ header {
 .atividade-img-area img[src*="mulheres"] {
     width: 150%;
     object-position: -60px;
+    filter: brightness(1.2);
+}
+.atividade-img-area img[src*="ventre-2"] {
+    filter: brightness(1.3);
 }
 .atividade-descricao-area {
     width: 100%;
@@ -482,11 +486,11 @@ header {
 .foto-area img:hover {
     opacity: 0.7;
 }
-.fotos-area :first-child img {
+.page-home .fotos-area :first-child img {
     width: 180%;
     object-position: -100px -30px;
 }
-.fotos-area :nth-child(2) img {
+.page-home .fotos-area :nth-child(2) img {
     object-position: -20px;
 }
 .foto-exibicao-container {
@@ -503,8 +507,7 @@ header {
 .foto-exibicao {
     background-color: #8b5b5bcc;
     width: 70vw;
-    min-height: 50vh;
-    max-height: 80vh;
+    height: 80vh;
     border: 10px solid #ffffff;
     position: fixed;
     top: 50%;
@@ -522,6 +525,7 @@ header {
     min-width: 100%;
     max-width: 100%;
     height: auto;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     z-index: 91;
@@ -698,7 +702,8 @@ footer p a:hover {
     display: flex;
     justify-content: center;
 }
-.page-quem-somos .pessoa:first-child {
+.page-quem-somos .pessoa:first-child,
+.page-quem-somos .pessoa:nth-child(2) {
     margin-bottom: 50px;
 }
 .page-quem-somos .pessoa-foto-area {
@@ -711,7 +716,7 @@ footer p a:hover {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.page-quem-somos .pessoa:last-child .pessoa-foto-area {
+.page-quem-somos .pessoa:nth-child(2) .pessoa-foto-area {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -748,8 +753,24 @@ footer p a:hover {
 .page-quem-somos .pessoa-descricao--texto p:first-child {
     margin-bottom: 10px;
 }
-
-
+.page-quem-somos .pessoa#namaste {
+    flex-direction: column;
+    height: 90vh;
+}
+.page-quem-somos #namaste .pessoa-foto-area {
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.page-quem-somos #namaste .pessoa-foto-area img {
+    object-position: center -20px;
+}
+.page-quem-somos #namaste .pessoa-descricao--area {
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+}
 
 /* media queries --------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 1800px) {
@@ -776,8 +797,6 @@ footer p a:hover {
     height: 100vh;
     background-position: center;
     background-size: cover;
-    justify-content: stretch;
-    align-items: stretch;
     background-blend-mode: soft-light;
 }
 
@@ -811,8 +830,12 @@ footer p a:hover {
     object-position: center;
     border-radius: 10px;
 }
+.page-atividades .atividades-area .atividade-image-area img[src*=mulheres] {
+    filter: brightness(1.1);
+}
 .page-atividades .atividades-area .atividade-image-area img[src*=danca] {
     object-position: center -150px;
+    filter: brightness(1.3);
 }
 .page-atividades .atividades-area .atividade-image-area img[src*=meditacao] {
     object-position: center -1080px;
@@ -850,4 +873,34 @@ footer p a:hover {
 }
 .page-atividades .atividades-area figure .resumo p:last-child:hover {
     color: #b494a4aa;
+}
+
+
+
+/* página fotos ------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------- */
+
+/* header ---------------------------------------------------------------------------------------------------- */
+.page-fotos .header-banner {
+    background-image: url('../imagens/complementares/isaac-inwood-reardon-pxi-QDBd0Fo-unsplash.jpg');
+    background-color: #9E658366;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+
+/* main ------------------------------------------------------------------------------------------------------ */
+.page-fotos .foto-exibicao {
+    height: 95vh;
+    width: 65vw;
+}
+
+/* media queries --------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1500px) {
+    .page-fotos .foto-exibicao {
+        height: 90vh;
+        width: 70vw;
+    }
 }
