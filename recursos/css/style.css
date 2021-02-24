@@ -48,7 +48,7 @@ a {
     color: inherit;
 }
 
-/* header ---------------------------------------------------------------------------------------------------- */
+/* header --------------------------------------------------------------------------------------------------- */
 header {
     /* background-color: thistle; */
     /* grid-row: 1 / span 1; */
@@ -106,7 +106,7 @@ header {
     /* background-color: teal; */
     height: 100%;
     padding: 10px;
-    grid-column: 4 / 10;
+    grid-column: 3 / 10;
     display: flex;
     align-items: center;
 }
@@ -183,6 +183,22 @@ header {
 .midias a:hover {
     background-color: #ffffff33;
 }
+.sandwich-menu {
+    width: 35px;
+    height: 35px;
+    display: none;
+    justify-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sandwich-menu-bar {
+    background-color: #ffffff;
+    width: 90%;
+    height: 4px;
+    margin: 3px;
+}
 
 .header-banner {
     width: 115%;
@@ -224,8 +240,10 @@ header {
 }
 
 
-/* main ------------------------------------------------------------------------------------------------------ */
-
+/* main ----------------------------------------------------------------------------------------------------- */
+main {
+    overflow: hidden;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -289,7 +307,7 @@ header {
     background-color: #c4748488;
 }
 
-/* descrição ------------------------------------------------------------------------------------------------- */
+/* descrição ------------------------------------------------------------------------------------------------ */
 .descricao-area {
     width: 100%;
     height: 50vh;
@@ -336,7 +354,7 @@ header {
     object-position: center;
 }
 
-/* quem somos ------------------------------------------------------------------------------------------------ */
+/* quem somos ----------------------------------------------------------------------------------------------- */
 #quem-somos .container-area {
     margin-bottom: 30px;
 }
@@ -393,7 +411,7 @@ header {
     color: #ffffff;
 }
 
-/* atividades ------------------------------------------------------------------------------------------------ */
+/* atividades ----------------------------------------------------------------------------------------------- */
 .atividades-area {
     max-width: 1140px;
     /* background-color: wheat; */
@@ -462,7 +480,7 @@ header {
     color: #82d4d3;
 }
 
-/* fotos ----------------------------------------------------------------------------------------------------- */
+/* fotos ---------------------------------------------------------------------------------------------------- */
 .fotos-area {
     max-width: 1140px;
 }
@@ -474,22 +492,21 @@ header {
     margin: 10px;
     overflow: hidden;
     display: flex;
+    justify-content: stretch;
+    align-items: stretch;
     cursor: pointer;
 }
 .foto-area img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 101%;
     object-fit: cover;
     object-position: center;
 }
 .foto-area img:hover {
     opacity: 0.7;
 }
-.page-home .fotos-area :first-child img {
-    width: 180%;
-    object-position: -100px -30px;
-}
-.page-home .fotos-area :nth-child(2) img {
+.fotos-area .regulagem {
     object-position: -20px;
 }
 .foto-exibicao-container {
@@ -553,24 +570,30 @@ header {
 }
 
 
-/* contatos -------------------------------------------------------------------------------------------------- */
+/* contatos ------------------------------------------------------------------------------------------------- */
 .contatos-area {
-    /* background-color: #b1769588; */
+    background-color: #b1769588;
+    width: 100vw;
+    max-width: 1140px;
     min-height: 400px;
     height: 40vh;
 }
 .contatos{
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
     flex: 1;
-    min-height: 100px;
+    width: 100%;
+    height: 100%;
     justify-content: stretch;
 }
 .contatos-pessoa {
     background-color: #ffffff;
-    max-width: 400px;
-    flex: 1;
+    width: 100%;
+    height: 50%;
     padding: 20px 40px;
     border: 2px solid #b1769588;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     /* color: #9E6482; */
     color: #888888;
@@ -604,19 +627,22 @@ header {
     font-weight: bold;
 }
 .mapa-area {
+    background-color: #442434;
     flex: 2;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: stretch;
 }
 iframe {
+    width: 100%;
+    /* height: 100%; */
     object-position: center;
     object-fit: cover;
-    min-width: 101%;
 }
 
-/* footer ---------------------------------------------------------------------------------------------------- */
+/* footer --------------------------------------------------------------------------------------------------- */
 footer {
     color: #cccccc;
 }
@@ -640,11 +666,8 @@ footer p a:hover {
 }
 
 
-/* media queries --------------------------------------------------------------------------------------------- */
+/* media queries -------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 1140px) {
-    .nav li {
-        font-size: 15px;
-    }
     .header-banner {
         background-position-y: 0;
     }
@@ -658,19 +681,137 @@ footer p a:hover {
         width: 230px;
         height: 230px;
     }
+    /* .contatos-pessoa p {
+        width: 250px;
+    } */
+}
+@media screen and (max-width: 950px) {
+    .header .nav li {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .header-area {
+        padding: 0 4vw;
+    }
+    .midias {
+        grid-column: 9 / 10;
+    }
+    .sandwich-menu {
+        display: flex;
+        grid-column: 10 / 11;
+        z-index: 980;
+    }
+    .nav {
+        background-color: #000000bb;
+        width: 45vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        align-items: flex-end;
+        display: none;
+    }
+    .navul {
+        height: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .nav li {
+        width: 100%;
+    }
+    .nav li a {
+        font-size: 21px;
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width: 770px) {
+    .contatos-area {
+        height: 50vh;
+        flex-direction: column;
+    }
+    .contatos {
+        flex-direction: row;
+    }
+    .contatos-pessoa {
+        width: 50%;
+        height: 100%;
+    }
+    .contatos-pessoa:first-child {
+        border-right: 0;
+        border-bottom: 2px solid #b1769588;
+    }
+    iframe {
+        height: 100%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .nav {
+        width: 60vw;
+    }
+    .contatos-area {
+        background-color: transparent;
+        height: auto;
+        align-items: center;
+    }
+    .contatos {
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .contatos-pessoa {
+        width: 100%;
+        height: 50%;
+        background-color: #ffffff;
+    }
+    .contatos-pessoa:first-child {
+        border-right: 2px solid #b1769588;
+        border-bottom: 0;
+    }
+    .mapa-area {
+        height: 40vh;
+        /* width: 0%; */
+    }
+    iframe {
+        width: 100%;
+    }
+    .developer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .developer p:last-child {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .logo-area {
+        grid-column: 1 / 7;
+        width: 140px;
+        height: 90px;
+    }
+    .nav {
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 375px) {
+    .developer p:last-child {
+        font-size: 10px;
+    }
 }
 
 
 
 
+/* página quem somos ------------------------------------------------------------------------------------------ --------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------- */
 
-/* página quem somos ------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------- */
-
-/* header ---------------------------------------------------------------------------------------------------- */
+/* header --------------------------------------------------------------------------------------------------- */
 .page-quem-somos .header-banner {
     background-image: url('../imagens/complementares/complementares-yoga.jpg');
     width: 105%;
-    background-position: -30px center;
+    background-position: center;
     align-items: flex-end;
 }
 .page-quem-somos .header-banner-area {
@@ -689,53 +830,71 @@ footer p a:hover {
 }
 
 
-/* main ------------------------------------------------------------------------------------------------------ */
+/* main ----------------------------------------------------------------------------------------------------- */
 
-/* quem somos ------------------------------------------------------------------------------------------------ */
+/* quem somos ----------------------------------------------------------------------------------------------- */
 .page-quem-somos .pessoa {
     background-color: #9E658388;
     width: 100%;
-    height: 80vh;
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.page-quem-somos .pessoa:first-child,
-.page-quem-somos .pessoa:nth-child(2) {
+.page-quem-somos #sara.pessoa,
+.page-quem-somos #elisa.pessoa {
     margin-bottom: 50px;
 }
-.page-quem-somos .pessoa-foto-area {
-    /* flex: 1; */
-    width: 50%;
-    height: 80vh;
-    overflow: hidden;
+.page-quem-somos #namaste.pessoa {
+    flex-direction: column;
 }
-.page-quem-somos .pessoa:first-child .pessoa-foto-area {
+.page-quem-somos .pessoa-foto-area {
+    width: 50%;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    background-size: cover;
+    background-position: center;
+}
+.page-quem-somos #sara .pessoa-foto-area {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    display: block;
 }
-.page-quem-somos .pessoa:nth-child(2) .pessoa-foto-area {
+.page-quem-somos #elisa .pessoa-foto-area {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.page-quem-somos #namaste .pessoa-foto-area {
+    width: 100%;
+    height: 55vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 .page-quem-somos .pessoa-foto-img {
     width: 100%;
-    height: auto;
-    min-height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.page-quem-somos .pessoa:last-child .pessoa-foto-img {
-    object-position: center -4.5vh;
+.page-quem-somos #sara.pessoa .pessoa-foto-img {
+    vertical-align: middle;
+}
+.page-quem-somos #namaste .pessoa-foto-area img {
+    object-position: center top;
 }
 .page-quem-somos .pessoa-descricao--area {
     width: 50%;
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #ffffff;
+}
+.page-quem-somos #namaste .pessoa-descricao--area {
+    width: 100%;
+    margin-top: 10px;
 }
 .page-quem-somos .pessoa-descricao--nome {
     margin-bottom: 20px;
@@ -751,30 +910,75 @@ footer p a:hover {
 .page-quem-somos .pessoa-descricao--texto p:first-child {
     margin-bottom: 10px;
 }
-.page-quem-somos .pessoa#namaste {
-    flex-direction: column;
-    height: 90vh;
-}
-.page-quem-somos #namaste .pessoa-foto-area {
-    width: 100%;
-    height: 50%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.page-quem-somos #namaste .pessoa-foto-area img {
-    object-position: center -20px;
-}
-.page-quem-somos #namaste .pessoa-descricao--area {
-    width: 100%;
-    height: 50%;
-    margin-top: 10px;
-}
 
-/* media queries --------------------------------------------------------------------------------------------- */
+
+/* media queries -------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 1800px) {
     .page-quem-somos .header-banner {
         width: 110%;
         background-position: -3vw -90vh;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .page-quem-somos .pessoa {
+        flex-direction: column;
+    }
+    .page-quem-somos .pessoa-foto-area {
+        height: 55vh;
+        width: 80%;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    .page-quem-somos #elisa .pessoa-foto-area {
+        order: -1;
+    }
+    .page-quem-somos #namaste .pessoa-foto-area {
+        width: 80%;
+    }
+    .page-quem-somos .pessoa-foto-img {
+        border-radius: 10px;
+    }
+    .page-quem-somos #namaste .pessoa-foto-area,
+    .page-quem-somos #namaste .pessoa-foto-area img {
+        border-radius: 10px;
+    }
+    .page-quem-somos #sara .pessoa-foto-area img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-position: center top;
+    }
+    .page-quem-somos #namaste .pessoa-foto-area img {
+        object-position: center;
+    }
+    .page-quem-somos .pessoa-descricao--area,
+    .page-quem-somos #namaste .pessoa-descricao--area {
+        width: 80%;
+    }
+    .page-quem-somos .pessoa-descricao--nome {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 550px) {
+    .page-quem-somos .pessoa-descricao--texto {
+        padding: 20px 0 !important;
+    }
+}
+@media screen and (max-width: 425px) {
+    .page-quem-somos .pessoa-descricao--texto {
+        font-size: 16px !important;
+    }
+}
+@media screen and (max-width: 375px) {
+    .page-quem-somos .pessoa-descricao--texto {
+        width: 90% !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .page-quem-somos .pessoa-foto-area,
+    .page-quem-somos .pessoa-foto-area img {
+        border-radius: 0 !important;
     }
 }
 
@@ -785,9 +989,9 @@ footer p a:hover {
 
 
 
-/* página atividades ------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------- */
+/* página atividades ------------------------------------------------------------------------------------------ --------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------- */
 
-/* header ---------------------------------------------------------------------------------------------------- */
+/* header --------------------------------------------------------------------------------------------------- */
 .page-atividades .header-banner {
     background-image: url('../imagens/complementares/jd-mason-xCPdjitY5sQ-unsplash.jpg');
     background-color: #9E658388;
@@ -798,7 +1002,7 @@ footer p a:hover {
     background-blend-mode: soft-light;
 }
 
-/* atividades ------------------------------------------------------------------------------------------------ */
+/* atividades ----------------------------------------------------------------------------------------------- */
 .page-atividades .atividades-area {
     width: 100%;
     display: flex;
@@ -875,9 +1079,9 @@ footer p a:hover {
 
 
 
-/* página fotos ------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------- */
+/* página fotos ----------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------- */
 
-/* header ---------------------------------------------------------------------------------------------------- */
+/* header --------------------------------------------------------------------------------------------------- */
 .page-fotos .header-banner {
     background-image: url('../imagens/complementares/isaac-inwood-reardon-pxi-QDBd0Fo-unsplash.jpg');
     background-color: #9E658366;
@@ -889,13 +1093,13 @@ footer p a:hover {
 }
 
 
-/* main ------------------------------------------------------------------------------------------------------ */
+/* main ----------------------------------------------------------------------------------------------------- */
 .page-fotos .foto-exibicao {
     height: 95vh;
     width: 65vw;
 }
 
-/* media queries --------------------------------------------------------------------------------------------- */
+/* media queries -------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 1500px) {
     .page-fotos .foto-exibicao {
         height: 90vh;
