@@ -710,7 +710,7 @@ footer p a:hover {
         top: 0;
         right: 0;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         display: none;
     }
     .navul {
