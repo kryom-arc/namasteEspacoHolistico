@@ -15,8 +15,20 @@ document.body.onscroll = () => {
     }
 }
 
-// fotos ////////////////////////////////////////////////////////////////////////////////////////////////////////
+// header sandwich menu //////////////////////////////////////////////////////////////////////////////////////
+let sandwich = document.querySelector('.sandwich-menu');
+sandwich.addEventListener('click', () => {
+    let nav = document.querySelector('.nav');
+    if (nav.style.display === 'none' || nav.style.display === '' || window.getComputedStyle(nav).getPropertyValue('display') === 'none') {
+        nav.style.display = 'flex';
+    } else {
+        nav.style.display = 'none';
+    }
+});
 
+
+
+// fotos ////////////////////////////////////////////////////////////////////////////////////////////////////////
 let fotos = document.getElementById('fotos');
 let fotosBlackOut = document.querySelector('.foto-exibicao-container');
 let area = document.querySelector('.foto-exibicao');

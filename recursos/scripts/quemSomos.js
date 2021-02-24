@@ -14,3 +14,14 @@ document.body.onscroll = () => {
         header.style.height = '';
     }
 }
+
+// header sandwich menu //////////////////////////////////////////////////////////////////////////////////////
+let sandwich = document.querySelector('.sandwich-menu');
+sandwich.addEventListener('click', (e) => {
+    let nav = document.querySelector('.nav');
+    if (nav.style.display === 'none' || nav.style.display === '' || window.getComputedStyle(nav).getPropertyValue('display') === 'none') {
+        nav.style.display = 'flex';
+    } else {
+        nav.style.display = 'none';
+    }
+});
