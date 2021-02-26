@@ -1040,6 +1040,9 @@ footer p a:hover {
         border-radius: 10px;
         object-position: center top;
     }
+    .page-quem-somos #elisa .pessoa-foto-img {
+        object-position: center 33%;
+    }
     .page-quem-somos #namaste .pessoa-foto-area img {
         object-position: center;
     }
