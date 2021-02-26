@@ -54,7 +54,7 @@ fotos.addEventListener('click', (e) => {
     // area.style.left = `${(100 - width) / 2}vw`;
     
     
-    let images = document.querySelectorAll('img');
+    let images = document.querySelectorAll('.foto');
     let imagesArray = Object.values(images);
     let width = e.target.naturalWidth;
     let height = e.target.naturalHeight;
