@@ -436,7 +436,7 @@ main {
     object-position: -60px;
     filter: brightness(1.2);
 }
-.atividade-img-area img[src*="ventre-2"] {
+.atividade-img-area img[src*="ventre-4"] {
     filter: brightness(1.3);
 }
 .atividade-descricao-area {
