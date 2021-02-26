@@ -52,6 +52,42 @@ fotos.addEventListener('click', (e) => {
     //     area.style.top = `${(100 - height) / 2}vh`;
     // }
     // area.style.left = `${(100 - width) / 2}vw`;
+    
+    
+    let images = document.querySelectorAll('img');
+    let imagesArray = Object.values(images);
+    let width = e.target.naturalWidth;
+    let height = e.target.naturalHeight;
+    if (imagesArray.some( i => i === e.target)) {
+        area.style.maxWidth = '95vw';
+        if (width > height) {
+            if (screen.width <= 950) {
+                area.style.width = '80vh';
+                area.style.height = '60vh';
+            } else if (screen.width <= 1200) {
+                area.style.width = '110vh';
+                area.style.height = '70vh';
+            } else if (screen.width > 1200) {
+                area.style.width = '140vh';
+                area.style.height = '90vh';
+            }
+        } else if (height > width) {
+            if (screen.width > 950) {
+                area.style.width = '80vh';
+                area.style.height = '95vh';
+            } else {
+                area.style.width = '70vh';
+                area.style.height = '80vh';
+            }
+        } else if (height === width) {
+            area.style.width = '90vh';
+            area.style.height = '90vh';
+        }
+    }
+
+
+
+
     if (screen.width > 500) {
         if (e.target.currentSrc) {
             area.style.display = 'flex';
