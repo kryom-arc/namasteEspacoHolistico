@@ -61,7 +61,10 @@ fotos.addEventListener('click', (e) => {
     if (imagesArray.some( i => i === e.target)) {
         area.style.maxWidth = '95vw';
         if (width > height) {
-            if (screen.width <= 950) {
+            if (screen.width <= 650) {
+                area.style.width = '80vh';
+                area.style.height = '40vh';
+            } else if (screen.width <= 950) {
                 area.style.width = '80vh';
                 area.style.height = '60vh';
             } else if (screen.width <= 1200) {
@@ -72,7 +75,10 @@ fotos.addEventListener('click', (e) => {
                 area.style.height = '90vh';
             }
         } else if (height > width) {
-            if (screen.width > 950) {
+            if (screen.width <= 650) {
+                area.style.width = '60vh';
+                area.style.height = '70vh';
+            } else if (screen.width > 950) {
                 area.style.width = '80vh';
                 area.style.height = '95vh';
             } else {
@@ -80,8 +86,13 @@ fotos.addEventListener('click', (e) => {
                 area.style.height = '80vh';
             }
         } else if (height === width) {
-            area.style.width = '90vh';
-            area.style.height = '90vh';
+            if (screen.width <= 650) {
+                area.style.width = '50vh';
+                area.style.height = '50vh';
+            } else {
+                area.style.width = '90vh';
+                area.style.height = '90vh';
+            }
         }
     }
 
