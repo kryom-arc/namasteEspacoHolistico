@@ -16,13 +16,23 @@ document.body.onscroll = () => {
 }
 
 // header sandwich menu //////////////////////////////////////////////////////////////////////////////////////
-let sandwich = document.querySelector('.sandwich-menu');
-sandwich.addEventListener('click', () => {
+let body = document.querySelector('body');
+body.addEventListener('click', (e) => {
+    let sandwich = document.querySelector('.sandwich-menu');
+    let sandwichBar = Object.values(sandwich.children);
     let nav = document.querySelector('.nav');
-    if (nav.style.display === 'none' || nav.style.display === '' || window.getComputedStyle(nav).getPropertyValue('display') === 'none') {
-        nav.style.display = 'flex';
-    } else {
-        nav.style.display = 'none';
+    let navDescendant = Object.values(nav.querySelectorAll('*'));
+    let contatos = document.querySelector("a[href='#contatos']");
+    if (e.target == sandwich || sandwichBar.some( (x) => x === e.target ) ) {
+        if (nav.style.display === 'none' || nav.style.display === '' || window.getComputedStyle(nav).getPropertyValue('display') === 'none') {
+            nav.style.display = 'flex';
+        } else if (nav.style.display === 'flex') {
+            nav.style.display = 'none';
+        } 
+    } else if ( (e.target === contatos) || (e.target !== sandwich || sandwichBar.some( x => x !== e.target)) && e.target !== nav && (!navDescendant.some(d => d === e.target)) ) {
+        if (nav.style.display === 'flex') {
+            nav.style.display = 'none';
+        }
     }
 });
 
@@ -42,13 +52,15 @@ fotos.addEventListener('click', (e) => {
     //     area.style.top = `${(100 - height) / 2}vh`;
     // }
     // area.style.left = `${(100 - width) / 2}vw`;
-    if (e.target.currentSrc) {
-        area.style.display = 'flex';
-        area.innerHTML = `'<img src="${e.target.currentSrc}" alt="">'${exit}`;
-        fotosBlackOut.style.display = 'flex';
-    } else if (e.target === x || !e.target.currentSrc){
-        area.style.display = 'none';
-        area.innerHTML = '';
-        fotosBlackOut.style.display = 'none';
+    if (screen.width > 500) {
+        if (e.target.currentSrc) {
+            area.style.display = 'flex';
+            area.innerHTML = `'<img src="${e.target.currentSrc}" alt="">'${exit}`;
+            fotosBlackOut.style.display = 'flex';
+        } else if (e.target === x || !e.target.currentSrc){
+            area.style.display = 'none';
+            area.innerHTML = '';
+            fotosBlackOut.style.display = 'none';
+        }
     }
 });
