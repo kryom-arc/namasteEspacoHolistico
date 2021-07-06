@@ -389,7 +389,8 @@ main {
     height: auto;
 }
 .quem-somos--img[src*=elisa] {
-    width: 150%;
+    width: auto;
+    height: 220%;
     object-position: -10px 45px;
 }
 .quem-somos--descricao-area {
