@@ -942,7 +942,7 @@ footer p a:hover {
 }
 .page-quem-somos .pessoa-foto-area {
     width: 50%;
-    max-height: 80vh;
+    /* max-height: 80vh; */
     overflow: hidden;
     display: flex;
     justify-content: stretch;
@@ -953,7 +953,7 @@ footer p a:hover {
 .page-quem-somos #sara .pessoa-foto-area {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    display: block;
+    height: 90vw;
 }
 .page-quem-somos #elisa .pessoa-foto-area {
     border-top-right-radius: 10px;
@@ -971,10 +971,11 @@ footer p a:hover {
     object-position: center;
 }
 .page-quem-somos #sara.pessoa .pessoa-foto-img {
-    vertical-align: middle;
+    object-position: right top;
+    height: 100%;
 }
-.page-quem-somos #namaste .pessoa-foto-area img {
-    object-position: center top;
+.page-quem-somos #namaste .pessoa-foto-img {
+    object-position: center top !important;
 }
 .page-quem-somos .pessoa-descricao--area {
     width: 50%;
@@ -1038,7 +1039,7 @@ footer p a:hover {
         width: 100%;
         height: auto;
         border-radius: 10px;
-        object-position: center top;
+        object-position: center 10% !important;
     }
     .page-quem-somos #elisa .pessoa-foto-img {
         object-position: center 33%;
