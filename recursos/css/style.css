@@ -971,7 +971,7 @@ footer p a:hover {
     object-position: center;
 }
 .page-quem-somos #sara.pessoa .pessoa-foto-img {
-    object-position: right top;
+    object-position: 85% top;
     height: 100%;
 }
 .page-quem-somos #namaste .pessoa-foto-img {
