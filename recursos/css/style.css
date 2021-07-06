@@ -953,7 +953,8 @@ footer p a:hover {
 .page-quem-somos #sara .pessoa-foto-area {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    height: 90vw;
+    /* height: 90vw; */
+    height: 130vh;
 }
 .page-quem-somos #elisa .pessoa-foto-area {
     border-top-right-radius: 10px;
@@ -971,7 +972,7 @@ footer p a:hover {
     object-position: center;
 }
 .page-quem-somos #sara.pessoa .pessoa-foto-img {
-    object-position: 85% top;
+    object-position: right top;
     height: 100%;
 }
 .page-quem-somos #namaste .pessoa-foto-img {
